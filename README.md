@@ -21,3 +21,26 @@ Before you can use Octogo, you'll need an Octopus Energy account and an API key.
 3. **Access API settings** by visiting the [API Access page](https://octopus.energy/dashboard/new/accounts/personal-details/api-access)
 4. **Generate your key** by clicking "Generate API Key" or similar button
 5. **Copy and store your key securely** - you'll need this for authentication
+
+## Examples
+
+### Electricity Meter
+
+```go
+client := octogo.NewClient("my-secure-api-key")
+ctx := context.TODO()
+meter, resp, err := client.Meter.GetElectricityMeter(ctx, mpan)
+
+if err != nil {
+  fmt.Printf("Something bad happned :(")
+  return err
+}
+
+
+if resp.StatusCode == http.StatusOK {
+  fmt.Printf("Meter Details:\n")
+  fmt.Printf("  GSP: %s\n", meter.GSP)
+  fmt.Printf("  MPAN: %s\n", meter.MPAN)
+  fmt.Printf("  Profile Class: %d\n", meter.ProfileClass)
+}
+```
