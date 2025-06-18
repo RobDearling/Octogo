@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="logo" src="./docs/images/logo.png">
+  <img alt="logo" src="./docs/images/logo.png" height=150>
   <h3 align="center">OctoGo 🐙</h3>
 </p>
 
