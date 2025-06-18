@@ -1,0 +1,16 @@
+name: Report a bug
+description: Create a report to help us improve
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the following template to the best of your ability
+  - type: textarea
+    id: bug-summary
+    attributes:
+      label: Bug Summary
+      description: A clear and concise description of what the bug is.
+      placeholder: I was trying to do X and Y happened
+    validations:
+      required: true
