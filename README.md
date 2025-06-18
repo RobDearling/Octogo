@@ -32,7 +32,7 @@ ctx := context.TODO()
 meter, resp, err := client.Meter.GetElectricityMeter(ctx, mpan)
 
 if err != nil {
-  fmt.Printf("Something bad happned :(")
+  fmt.Printf("An error occurred while fetching the electricity meter: %v\n", err)
   return err
 }
 
