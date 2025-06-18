@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"net/http"
 	"octogo"
 	"os"
 
@@ -38,7 +39,7 @@ func main() {
 
 	fmt.Printf("HTTP Status: %s\n", resp.Status)
 
-	if resp.StatusCode == 200 {
+	if resp.StatusCode == http.StatusOK {
 		fmt.Printf("Meter Details:\n")
 		fmt.Printf("  GSP: %s\n", meter.GSP)
 		fmt.Printf("  MPAN: %s\n", meter.MPAN)
