@@ -3,7 +3,7 @@
 </p>
 
 ---
-
+![GitHub Release (latest SemVer)](https://img.shields.io/github/v/release/RobDearling/octogo?logo=github&label=Release&sort=semver)
 Octogo is a Golang package that provides a client for interfacing with the Octopus Energy API.
 
 
